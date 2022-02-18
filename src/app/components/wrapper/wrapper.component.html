@@ -1,0 +1,51 @@
+<mat-toolbar class="mat-toolbar ">
+    User Management Admin Panel
+    
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    This is the expansion title
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    This is a summary of the content
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>This is the primary content of the panel.</p>
+              </mat-expansion-panel>
+        </mat-accordion>
+    
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenanv mode="side" opened="true">
+        <mat-nav-list>
+            <mat-list-item (click)="isExpanded = !isExpanded">
+                <mat-icon mat-list-icon class="">chevron_right</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/home">
+                <mat-icon mat-list-icon class="">dashboard</mat-icon>
+                <span *ngIf="isExpanded">Dashboard</span>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/dashboard">
+                <mat-icon mat-list-icon class="">important_devices</mat-icon>
+                <span *ngIf="isExpanded">Home</span>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/">
+                <mat-icon mat-list-icon class="">settings</mat-icon>
+                <span *ngIf="isExpanded">Setting</span>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+
+
+</mat-sidenav-container>
