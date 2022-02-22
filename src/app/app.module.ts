@@ -13,17 +13,19 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HomeComponent } from './components/home/home.component';
-import { WrapperComponent } from './components/wrapper/wrapper.component';
-import {MatExpansionModule} from '@angular/material/expansion';
 
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HomeComponent,
-    WrapperComponent,
+   
+    LoginComponent,
+    HeaderComponent,
+    SidenavComponent,
     
   ],
   imports: [
@@ -37,6 +39,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatDividerModule, 
     MatListModule,
     FormsModule,
+    MatCardModule,
     FlexLayoutModule,
     ReactiveFormsModule
   ],
